@@ -18,7 +18,7 @@ predefined schema). You can code that in any way you like, and there are
 a few examples on the site.
 
 Liverpie will talk to your web app on one end, and to Freeswitch on the 
-other -- that's what qualifies is as a proxy.
+other -- that's what qualifies it as a proxy.
 
 Full documentation is now only maintained at http://www.liverpie.com because 
 I got tired of editing the same things in two places.
