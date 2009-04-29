@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'lib/script_base'
+require 'lib/liverpie_server'
+require 'lib/liverpie_client'
+
+module Liverpie
+  def self.config
+    yml = YAML.load_file(File.join(File.dirname(__FILE__), '../config/liverpie.yml'))
+    yml['configuration']
+  end
+  
+  def self.webapps
+    yml = YAML.load_file(File.join(File.dirname(__FILE__), '../config/liverpie.yml'))
+    yml['webapps']
+  end
+    
+  def self.log(txt)
+    puts "#{Time.now.utc}: #{txt}\n"
+  end
+end
+
+Liverpie::ScriptHandler.new('liverpie') do |v, d|
+  EventMachine::run {
+    bind_ip, bind_port = Liverpie.config['bind_ip'], Liverpie.config['bind_port']
+    puts "Binding to IP #{bind_ip}:#{bind_port}..."
+    EventMachine::start_server bind_ip, bind_port, LiverpieServer do |server|
+      server.set_modes v, d
+    end
+    puts "Liverpie FreeSWITCH PROXY - Now Accepts Connections."
+  }
+end
+    

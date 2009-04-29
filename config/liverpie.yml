@@ -1,0 +1,27 @@
+---
+configuration:
+  # bind_ip, bind_port - where to start the local server. In Freeswitch, this must reflect in your dialplan:
+  # <action application="socket" data="ENTER_LIVERPIE_IP_HERE:ENTER_LIVERPIE_PORT_HERE async full />"
+  bind_ip: 0.0.0.0
+  bind_port: 8084
+  #
+  # Configure each separate IVR application below. The id of the application needs to be sent from Freeswitch as a channel variable like so:
+  # <action application="set" data="liverpie_webapp_id=my_webapp />"
+webapps:
+  my_webapp:
+    # webapp_ip, webapp_port - where your webapp is
+    ip: 192.168.0.19
+    port: 3002
+    # the URI to call the state machine:
+    state_machine_uri: '/ivr/state_machine'
+    # the URI to reset the state machine:
+    reset_uri: '/ivr/reset'
+    # the URI to call when a DTMF pops up (optional):
+    dtmf_uri: '/ivr/dtmf'
+  conference:
+    ip: 192.168.0.19
+    port: 3003
+    state_machine_uri: '/ivr/state_machine'
+    reset_uri: '/ivr/reset'
+    dtmf_uri: '/ivr/dtmf'
+    

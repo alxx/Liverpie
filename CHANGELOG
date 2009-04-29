@@ -1,0 +1,16 @@
+26 feb 2009 - version 0.5
+ * Liverpie now can handle multiple web applications! Run several IVRs with the same Liverpie instance.
+ * Changed syntax of config file accordingly; added convert script.
+ * Fixed some bugs, cleaned up a bit.
+
+1 feb 2009 - version 0.4
+ * fixed an issue where Liverpie ignored parameters received in two batches, therefore causing problems with call_direction
+ * fixed an issue where Liverpie could set nil cookies
+
+14 nov 2008 - version 0.3
+ * added support for DTMF notification (a separate webapp uri which gets called everytime there's a DTMF event with the respective value)
+ * fixed bug with generating webapp parameters
+
+25 sept 2008 - version 0.2
+ * fixed a bug that prevented web servers that don't send cookies with each request (like Tomcat) to work with Liverpie
+ * fixed a bug where Liverpie would crash if the webapp became unavailable. Now it just carelessly logs it.
