@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'yaml'
-require 'lib/script_base'
-require 'lib/liverpie_server'
-require 'lib/liverpie_client'
+require File.expand_path('lib/script_base.rb')
+require File.expand_path('lib/liverpie_server')
+require File.expand_path('lib/liverpie_client')
 
 module Liverpie
   def self.config

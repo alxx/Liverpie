@@ -1,3 +1,6 @@
+17 apr 2018 - version 0.6
+ * Gemfile
+
 26 feb 2009 - version 0.5
  * Liverpie now can handle multiple web applications! Run several IVRs with the same Liverpie instance.
  * Changed syntax of config file accordingly; added convert script.
