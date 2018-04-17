@@ -43,15 +43,13 @@ See [https://github.com/alxx/Liverpie]
 
 Use GitHub, or there's an older Google Group at [http://groups.google.com/group/liverpie-support].
 
+My email is alxx@indigenious.ro and I'm available for consultancy regarding the installation and usage of Liverpie.
+
 ## CREDITS
 
 Jonathan Palley, author of Telegraph for FreeSWITCH, wrote the part that
 instantiates an EventMachine and creates a server ready for FreeSWITCH.
 I wrote everything else and changed some of Jonathan's code.
-
-    Contact me at: alxx@indigenious.ro.
-
-I'm available for consultancy regarding installation and usage of Liverpie.
 
 Adeel Ansari helped with the Java example and also worked with me to fix
 a bug that prevented some Java webservers that don't always send a cookie
